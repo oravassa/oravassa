@@ -685,54 +685,6 @@ section h2{
 
 }
 
-/*========================================
-              EMPRESA
-========================================*/
-
-
-.contenedor{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:50px;
-
-}
-
-
-
-.contenedor div{
-
-    flex:1;
-
-}
-
-
-
-.contenedor img{
-
-    width:50%;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-}
-
-
-
-.contenedor p{
-
-    font-size:18px;
-
-    line-height:32px;
-
-    margin-bottom:20px;
-
-}
-
-
 
 
 /*========================================
