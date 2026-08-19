@@ -789,6 +789,8 @@ nav ul li a i {
     border-radius: 0;
 
     overflow: hidden;
+        
+    position: relative;
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
 
@@ -842,11 +844,17 @@ nav ul li a i {
 
 .nombre-categoria {
 
-    background: #1d6b3d;
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.45);
 
     color: white;
 
-    padding: 20px;
+    padding: 12px 15px;
 
     display: flex;
 
@@ -854,11 +862,15 @@ nav ul li a i {
 
     align-items: center;
 
-    gap: 12px;
+    font-family: 'Oswald', sans-serif;
 
-    font-size: 21px;
+    font-size: 20px;
 
-    font-weight: bold;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
 
 }
 
