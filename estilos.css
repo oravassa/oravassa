@@ -1917,5 +1917,42 @@ footer img{
 
 }
 
+/*========================================
+          MENÚ EN TELÉFONO
+========================================*/
+
+@media (max-width:700px){
+
+    nav{
+        padding:6px 3%;
+    }
+
+    .nav-contenido{
+        width:100%;
+    }
+
+    nav ul{
+        width:100%;
+        padding:4px;
+        gap:2px;
+    }
+
+    nav ul li{
+        flex:1;
+    }
+
+    nav ul li a{
+        min-height:38px;
+        padding:4px 2px;
+        gap:2px;
+        font-size:9px;
+    }
+
+    nav ul li a i{
+        font-size:16px;
+    }
+
+}
+
 
 
