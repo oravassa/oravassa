@@ -542,7 +542,7 @@ const trabajosGaleria = [
 
             "elcalafate.JPG",
 
-            "elcalafate1.JPG",
+            "elcalafate1.jpg",
 
             "elcalafate2.JPG",
 
@@ -565,13 +565,13 @@ const trabajosGaleria = [
 
         fotos: [
 
-            "cartocor.jpg",
+            "cartocor.JPG",
 
-            "cartocor1.jpg",
+            "cartocor1.JPG",
 
-            "cartocor2.jpg",
+            "cartocor2.JPG",
 
-            "cartocor3.jpg"
+            "cartocor3.JPG"
 
 
         ]
