@@ -536,49 +536,185 @@ section h2{
 
     line-height: 1.4;
 }
+/* ========================================
+        ADAPTACIÓN PARA CELULARES
+======================================== */
+
 @media (max-width: 768px) {
 
-    .subtitulo-header {
+    /* HEADER */
+
+    header {
+        min-height: 100svh;
+        height: auto;
+        overflow: hidden;
+    }
+
+
+    /* MENÚ */
+
+    nav {
+        padding: 6px 4%;
+    }
+
+    .nav-contenido {
+        width: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px;
+        padding: 5px;
+        border-radius: 30px;
+    }
+
+    nav ul li {
+        width: 100%;
+        min-width: 0;
+    }
+
+    nav ul li a {
+        min-height: 55px;
+        padding: 5px 2px;
+        gap: 3px;
+        font-size: 11px;
+        border-radius: 25px;
+    }
+
+    nav ul li a i {
+        font-size: 17px;
+    }
+
+    nav ul li a.whatsapp-menu i {
+        font-size: 19px;
+    }
+
+
+    /* PRESENTACIÓN */
+
+    .presentacion {
+        width: 94%;
+        max-width: none;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    /* LOGO */
+
+    .logo-header {
+        width: 125px;
+        height: 105px;
+        margin: 0 auto 8px auto;
+    }
+
+
+    /* NOMBRE */
+
+    .presentacion h1 {
+        font-size: 38px !important;
+        letter-spacing: 3px;
+        line-height: 1.05;
+        white-space: nowrap;
+    }
+
+
+    /* SUBTÍTULO */
+
+    .subtitulo-linea {
         gap: 10px;
+        margin-top: 8px;
+        width: 100%;
     }
 
-    .subtitulo-header span {
-        width: 50px;
+    .subtitulo-linea span {
+        width: 45px;
+        flex-shrink: 1;
     }
 
-    .subtitulo-header h2 {
-        font-size: 27px;
+    .subtitulo-linea h2 {
+        font-size: 25px;
+        letter-spacing: .5px;
+        white-space: nowrap;
     }
+
+
+    /* INFORMACIÓN INFERIOR */
 
     .info-header {
-        position: relative;
+        position: absolute;
+        left: 3%;
+        right: 3%;
+        bottom: 15px;
+        width: auto;
+        min-height: auto;
 
-        left: auto;
-        right: auto;
-        bottom: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
-        width: 94%;
-        margin: 20px auto;
+        gap: 0;
 
-        flex-direction: column;
+        padding: 12px 8px;
 
-        gap: 15px;
-
-        padding: 20px;
+        border-radius: 18px;
     }
 
     .info-item {
         width: 100%;
-        padding: 12px 5px;
+        min-height: 65px;
+        padding: 8px 7px;
+        gap: 8px;
+        justify-content: center;
+        text-align: left;
     }
 
     .info-item + .info-item {
+        border-left: 1px solid rgba(90, 190, 90, 0.35);
+        border-top: none;
+        padding-top: 8px;
+    }
+
+    .info-item:nth-child(3) {
         border-left: none;
         border-top: 1px solid rgba(90, 190, 90, 0.35);
-        padding-top: 20px;
     }
-}
 
+    .info-item:nth-child(4) {
+        border-top: 1px solid rgba(90, 190, 90, 0.35);
+    }
+
+    .info-item i {
+        font-size: 25px;
+        min-width: 30px;
+    }
+
+    .info-item h3 {
+        font-size: 12px;
+        line-height: 1.15;
+        margin: 0;
+    }
+
+    .info-item p {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+
+
+    /* SECCIONES */
+
+    section {
+        padding: 60px 5%;
+    }
+
+    section h2 {
+        font-size: 32px;
+        margin-bottom: 35px;
+    }
+
+}
 
 /*========================================
               EMPRESA
@@ -1827,214 +1963,3 @@ footer img{
 
 
 
-/*========================================
-          RESPONSIVE CELULARES
-========================================*/
-
-
-@media(max-width:1000px){
-
-
-.presentacion h1{
-
-    font-size:55px;
-
-}
-
-
-
-.servicios-container{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-
-.galeria{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-
-.maquinas img{
-
-    min-width:50%;
-
-}
-
-
-
-.contenedor{
-
-    flex-direction:column;
-
-}
-
-
-
-.contenedor img{
-
-    width:100%;
-
-}
-
-
-
-}
-
-
-
-
-
-@media(max-width:700px){
-
-
-
-header{
-
-    height:90vh;
-
-}
-
-
-
-nav{
-
-    flex-direction:column;
-
-    padding:20px;
-
-}
-
-
-
-.logo{
-
-    width:110px;
-
-}
-
-
-
-nav ul{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:15px;
-
-    margin-top:20px;
-
-}
-
-
-
-nav ul li a{
-
-    font-size:14px;
-
-}
-
-
-
-.presentacion h1{
-
-    font-size:35px;
-
-}
-
-
-
-.presentacion h2{
-
-    font-size:25px;
-
-}
-
-
-
-.presentacion p{
-
-    font-size:16px;
-
-}
-
-
-
-section{
-
-    padding:60px 5%;
-
-}
-
-
-
-section h2{
-
-    font-size:32px;
-
-}
-
-
-
-.servicios-container{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.galeria{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.maquinas img{
-
-    min-width:100%;
-
-}
-
-
-
-#anterior{
-
-    left:5px;
-
-}
-
-
-
-#siguiente{
-
-    right:5px;
-
-}
-
-
-
-form{
-
-    padding:25px;
-
-}
-
-
-
-.datos p{
-
-    font-size:17px;
-
-}
-
-
-
-}
