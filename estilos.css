@@ -1948,7 +1948,22 @@ footer img{
     font-size: 32px;
 }
 
+@media (max-width: 700px) {
 
+    .contenedor {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contenedor div {
+        width: 100%;
+    }
+
+    .contenedor img {
+        width: 100%;
+    }
+
+}
 
 
 
