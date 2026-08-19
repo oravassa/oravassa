@@ -276,37 +276,6 @@ nav ul li a.activo{
 
 }
 
-
-/*========================================
-          BOTÓN WHATSAPP
-========================================*/
-
-nav ul li a.whatsapp-menu{
-
-    background:#1d6b3d;
-
-    color:white;
-
-    border-radius:40px;
-
-}
-
-
-nav ul li a.whatsapp-menu i{
-
-    font-size:20px;
-
-}
-
-
-nav ul li a.whatsapp-menu:hover{
-
-    background:#3aa655;
-
-    transform:translateY(-2px);
-
-}
-
 /*========================================
           TEXTO PRINCIPAL HEADER
 ========================================*/
@@ -1957,6 +1926,26 @@ footer img{
 
     margin:0 auto 15px;
 
+}
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-flotante i {
+    color: white;
+    font-size: 32px;
 }
 
 
