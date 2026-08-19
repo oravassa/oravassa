@@ -1678,6 +1678,69 @@ section h2{
 
 }
 
+/*========================================
+          TRABAJOS EN CELULAR
+========================================*/
+
+@media (max-width:700px){
+
+    .trabajos-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+        width:94%;
+
+        margin:0 auto;
+
+    }
+
+
+    .trabajo{
+
+        width:100%;
+
+        min-width:0;
+
+        border-radius:15px;
+
+    }
+
+
+    .trabajo > img,
+    .trabajo > video{
+
+        width:100%;
+
+        height:220px;
+
+        object-fit:cover;
+
+    }
+
+
+    .trabajo-info{
+
+        padding:12px 8px;
+
+    }
+
+
+    .trabajo-info h3{
+
+        font-size:16px;
+
+        line-height:1.3;
+
+        margin:0;
+
+        overflow-wrap:break-word;
+
+    }
+
+}
+
 
 /*========================================
               PRESUPUESTO
