@@ -1097,14 +1097,12 @@ nav ul li a i {
     position: absolute;
 
     left: 0;
-
     right: 0;
-
     bottom: 0;
 
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.45) !important;
 
-    color: white;
+    color: #ffffff !important;
 
     padding: 12px 15px;
 
@@ -1119,6 +1117,8 @@ nav ul li a i {
     letter-spacing: 1.5px;
 
     text-transform: uppercase;
+
+    z-index: 5;
 
 }
 
