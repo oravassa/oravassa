@@ -1038,11 +1038,14 @@ nav ul li a i {
 
     overflow: hidden;
 
+    position: relative;
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
 
     cursor: pointer;
 
     transition: .3s;
+
 
 }
 
@@ -1085,24 +1088,40 @@ nav ul li a i {
 
 }
 
-
 /*========================================
-        NOMBRE DEL MODELO
+        NOMBRE DEL MODELO SOBRE LA IMAGEN
 ========================================*/
 
 .nombre-modelo {
 
-    padding: 15px;
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: white;
+
+    padding: 12px 15px;
 
     text-align: center;
 
-    color: #1d6b3d;
+    font-family: 'Oswald', sans-serif;
 
-    font-size: 19px;
+    font-size: 20px;
 
-    font-weight: bold;
+    font-weight: 300;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
 
 }
+
 
 
 /*========================================
