@@ -377,20 +377,15 @@ function abrirImagenGrande(imagen, nombre) {
 
     const imagenGrande = document.getElementById("imagenGrande");
 
-    const nombreImagen = document.getElementById("nombreImagenGrande");
-
 
     imagenGrande.src = imagen;
 
     imagenGrande.alt = nombre;
 
-    nombreImagen.textContent = nombre;
-
 
     modalImagen.style.display = "flex";
 
 }
-
 
 // ========================================
 // CERRAR AL HACER CLIC FUERA
