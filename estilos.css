@@ -1012,7 +1012,7 @@ nav ul li a i {
 
 .cerrar-modal:hover {
 
-    background: #2f8b53;
+    background: transparent;
 
     transform: rotate(90deg);
 
