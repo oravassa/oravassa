@@ -1209,7 +1209,7 @@ nav ul li a i {
 
     border-radius: 50%;
 
-    background: #1d6b3d;
+    background: transparent;
 
     color: white;
 
@@ -1226,7 +1226,7 @@ nav ul li a i {
 
 .cerrar-imagen:hover {
 
-    background: #2f8b53;
+    background: transparent;
 
     transform: rotate(90deg);
 
