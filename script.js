@@ -933,3 +933,25 @@ function cerrarGaleria(){
     document.body.style.overflow = "auto";
 
 }
+
+// ========================================
+// MENÚ ACTIVO
+// ========================================
+
+const enlacesMenu = document.querySelectorAll("nav a");
+
+enlacesMenu.forEach(enlace => {
+
+    enlace.addEventListener("click", function() {
+
+        // Quitar activo de todos
+        enlacesMenu.forEach(item => {
+            item.classList.remove("activo");
+        });
+
+        // Marcar el seleccionado
+        this.classList.add("activo");
+
+    });
+
+});
