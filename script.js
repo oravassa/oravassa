@@ -765,23 +765,31 @@ const trabajosGaleria = [
 
 ];
 
-
 let trabajoActual = 0;
 
 let fotoActual = 0;
 
 
-function abrirGaleria(numeroTrabajo){
+// ========================================
+// ABRIR GALERÍA
+// ========================================
 
+function abrirGaleria(numeroTrabajo){
 
     trabajoActual = numeroTrabajo;
 
     fotoActual = 0;
 
-
     mostrarFoto();
 
-        // ========================================
+    document.getElementById("modalGaleria").style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+// ========================================
 // FOTO SIGUIENTE
 // ========================================
 
@@ -823,12 +831,19 @@ function fotoAnterior(){
 }
 
 
-    document.getElementById("modalGaleria").style.display = "flex";
+// ========================================
+// CERRAR GALERÍA
+// ========================================
 
+function cerrarGaleria(){
 
-    document.body.style.overflow = "hidden";
+    document.getElementById("modalGaleria").style.display = "none";
+
+    document.body.style.overflow = "auto";
 
 }
+
+
 
 
 function mostrarFoto(){
