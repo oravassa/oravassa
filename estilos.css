@@ -727,21 +727,25 @@ nav ul li a i {
 }
 
 
-.subtitulo-maquinaria::after {
+.subtitulo-maquinaria {
 
-    content: "";
+    text-align: center;
 
-    display: block;
+    color: #1d6b3d;
 
-    width: 80px;
+    font-family: 'Oswald', sans-serif;
 
-    height: 4px;
+    font-size: 30px;
 
-    background: #1d6b3d;
+    font-weight: 300;
 
-    margin: 15px auto 0;
+    letter-spacing: 2px;
 
-    border-radius: 10px;
+    text-transform: uppercase;
+
+    margin: 40px 0 30px;
+
+    position: relative;
 
 }
 
@@ -1387,6 +1391,25 @@ nav ul li a i {
 
     margin-bottom:60px;
 
+    position:relative;
+
+}
+
+
+#trabajos h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:45px;
+
+    height:2px;
+
+    background:#1d6b3d;
+
+    margin:12px auto 0;
+
 }
 
 
@@ -1934,6 +1957,23 @@ nav ul li a i {
     background:#f4f7f3;
 
 }
+#presupuesto h2{
+
+    color:#1d6b3d;
+
+    font-family:'Oswald', sans-serif;
+
+    font-size:38px;
+
+    font-weight:300;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    text-align:center;
+
+}
 
 
 
@@ -1970,7 +2010,9 @@ form textarea{
 
     font-size:16px;
 
-    font-family:'Poppins',sans-serif;
+    font-family:'Oswald',sans-serif;
+
+    letter-spacing:0.5px;
 
 }
 
@@ -2012,6 +2054,14 @@ form button{
     color:white;
 
     font-size:18px;
+
+    font-family:'Oswald',sans-serif;
+
+    font-weight:400;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
 
     cursor:pointer;
 
@@ -2081,13 +2131,31 @@ form button:hover{
 
     color:white;
 
+    font-family:'Oswald',sans-serif;
+
+    font-size:38px;
+
+    font-weight:300;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    position:relative;
+
 }
 
 
 
 .datos p{
 
+    font-family:'Oswald',sans-serif;
+
     font-size:20px;
+
+    font-weight:300;
+
+    letter-spacing:1px;
 
     margin:15px;
 
