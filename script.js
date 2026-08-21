@@ -871,7 +871,7 @@ function mostrarFoto(){
     }
 
 
-    // ========================================
+// ========================================
     // TÍTULO Y DESCRIPCIÓN
     // ========================================
 
@@ -879,58 +879,29 @@ function mostrarFoto(){
 
     document.getElementById("descripcionGaleria").textContent = trabajo.descripcion;
 
-}
+
+    // ========================================
+    // INDICADORES DE GALERÍA
+    // ========================================
+
+    const indicadores = document.getElementById("indicadoresGaleria");
+
+    indicadores.innerHTML = "";
 
 
-function fotoSiguiente(){
+    trabajo.fotos.forEach((foto, indice) => {
 
+        const punto = document.createElement("span");
 
-    const trabajo = trabajosGaleria[trabajoActual];
+        if(indice === fotoActual){
 
+            punto.classList.add("activo");
 
-    fotoActual++;
+        }
 
+        indicadores.appendChild(punto);
 
-    if(fotoActual >= trabajo.fotos.length){
-
-        fotoActual = 0;
-
-    }
-
-
-    mostrarFoto();
-
-}
-
-
-function fotoAnterior(){
-
-
-    const trabajo = trabajosGaleria[trabajoActual];
-
-
-    fotoActual--;
-
-
-    if(fotoActual < 0){
-
-        fotoActual = trabajo.fotos.length - 1;
-
-    }
-
-
-    mostrarFoto();
-
-}
-
-
-function cerrarGaleria(){
-
-
-    document.getElementById("modalGaleria").style.display = "none";
-
-
-    document.body.style.overflow = "auto";
+    });
 
 }
 
