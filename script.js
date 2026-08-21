@@ -781,6 +781,47 @@ function abrirGaleria(numeroTrabajo){
 
     mostrarFoto();
 
+        // ========================================
+// FOTO SIGUIENTE
+// ========================================
+
+function fotoSiguiente(){
+
+    const trabajo = trabajosGaleria[trabajoActual];
+
+    fotoActual++;
+
+    if(fotoActual >= trabajo.fotos.length){
+
+        fotoActual = 0;
+
+    }
+
+    mostrarFoto();
+
+}
+
+
+// ========================================
+// FOTO ANTERIOR
+// ========================================
+
+function fotoAnterior(){
+
+    const trabajo = trabajosGaleria[trabajoActual];
+
+    fotoActual--;
+
+    if(fotoActual < 0){
+
+        fotoActual = trabajo.fotos.length - 1;
+
+    }
+
+    mostrarFoto();
+
+}
+
 
     document.getElementById("modalGaleria").style.display = "flex";
 
