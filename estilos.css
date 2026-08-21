@@ -993,7 +993,7 @@ nav ul li a i {
 
     border-radius: 50%;
 
-    background: #1d6b3d;
+    background: transparent;
 
     color: white;
 
@@ -1660,7 +1660,7 @@ nav ul li a i {
 
     border-radius:50%;
 
-    background:#1d6b3d;
+    background:transparent;
 
     color:white;
 
@@ -1677,7 +1677,7 @@ nav ul li a i {
 
 .cerrar-galeria:hover{
 
-    background:#3aa655;
+    background:transparent;
 
     transform:scale(1.1);
 
@@ -1705,7 +1705,7 @@ nav ul li a i {
 
     border-radius:50%;
 
-    background:#1d6b3d;
+    background:transparent;
 
     color:white;
 
@@ -1722,7 +1722,7 @@ nav ul li a i {
 
 .flecha-galeria:hover{
 
-    background:#3aa655;
+    background:transparent;
 
     transform:translateY(-50%) scale(1.1);
 
