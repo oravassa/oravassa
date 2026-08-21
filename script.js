@@ -798,7 +798,6 @@ function mostrarFoto(){
 
     const imagen = document.getElementById("imagenGaleria");
 
-    // Buscar si ya existe un video
     let video = document.getElementById("videoGaleria");
 
 
@@ -808,7 +807,6 @@ function mostrarFoto(){
 
     if (archivo.toLowerCase().endsWith(".mp4")) {
 
-        // Si el video todavía no existe, crearlo
         if (!video) {
 
             video = document.createElement("video");
@@ -821,19 +819,15 @@ function mostrarFoto(){
 
             video.playsInline = true;
 
-            // Lo agregamos después de la imagen
             imagen.parentNode.insertBefore(video, imagen.nextSibling);
 
         }
 
 
-        // Ocultar imagen
         imagen.style.display = "none";
 
-        // Mostrar video
         video.style.display = "block";
 
-        // Cargar video
         video.src = archivo;
 
         video.load();
@@ -847,7 +841,6 @@ function mostrarFoto(){
 
     else {
 
-        // Ocultar video si existe
         if (video) {
 
             video.pause();
@@ -861,7 +854,6 @@ function mostrarFoto(){
         }
 
 
-        // Mostrar imagen
         imagen.style.display = "block";
 
         imagen.src = archivo;
@@ -871,7 +863,7 @@ function mostrarFoto(){
     }
 
 
-// ========================================
+    // ========================================
     // TÍTULO Y DESCRIPCIÓN
     // ========================================
 
@@ -886,22 +878,25 @@ function mostrarFoto(){
 
     const indicadores = document.getElementById("indicadoresGaleria");
 
-    indicadores.innerHTML = "";
+    if (indicadores) {
 
+        indicadores.innerHTML = "";
 
-    trabajo.fotos.forEach((foto, indice) => {
+        trabajo.fotos.forEach((foto, indice) => {
 
-        const punto = document.createElement("span");
+            const punto = document.createElement("span");
 
-        if(indice === fotoActual){
+            if (indice === fotoActual) {
 
-            punto.classList.add("activo");
+                punto.classList.add("activo");
 
-        }
+            }
 
-        indicadores.appendChild(punto);
+            indicadores.appendChild(punto);
 
-    });
+        });
+
+    }
 
 }
 
