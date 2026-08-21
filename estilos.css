@@ -1910,6 +1910,11 @@ nav ul li a i {
     padding:40px 10px 20px;
 
 }
+.flecha-galeria{
+
+    display:none;
+
+}
 
 
 #imagenGaleria,
