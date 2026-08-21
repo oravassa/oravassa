@@ -1662,7 +1662,55 @@ nav ul li a i {
     max-width:800px;
 
 }
+/*========================================
+          INDICADORES DE GALERÍA
+========================================*/
 
+#indicadoresGaleria{
+
+    position:absolute;
+
+    top:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:7px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:20;
+
+}
+
+
+#indicadoresGaleria span{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    transition:.3s;
+
+}
+
+
+#indicadoresGaleria span.activo{
+
+    background:#ffffff;
+
+    transform:scale(1.35);
+
+}
 /*========================================
           BOTÓN CERRAR
 ========================================*/
