@@ -957,6 +957,39 @@ function mostrarFoto(){
 }
 
 // ========================================
+// NAVEGACIÓN TÁCTIL EN CELULAR
+// ========================================
+
+document.getElementById("imagenGaleria").addEventListener("click", function(event){
+
+    // Solo funciona en pantallas de celular
+    if(window.innerWidth > 700){
+        return;
+    }
+
+    // Obtener el ancho de la imagen
+    const anchoImagen = this.clientWidth;
+
+    // Obtener la posición del toque dentro de la imagen
+    const posicionX = event.offsetX;
+
+    // Si tocamos la mitad izquierda
+    if(posicionX < anchoImagen / 2){
+
+        fotoAnterior();
+
+    }
+
+    // Si tocamos la mitad derecha
+    else{
+
+        fotoSiguiente();
+
+    }
+
+});
+
+// ========================================
 // MENÚ ACTIVO
 // ========================================
 
