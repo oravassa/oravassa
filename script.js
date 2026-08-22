@@ -293,6 +293,42 @@ const categoriasMaquinaria = {
 
         ]
 
+    },
+    // ====================================
+    // TANQUE CISTERNA
+    // ====================================
+
+       tanque cisterna: {
+
+        titulo: "TANQUE CISTERNA",
+
+        modelos: [
+
+            {
+                nombre: "CISTERNA 14800 lts",
+                imagen: "cisterna1.jpg"
+            },
+
+        ]
+
+    },
+    // ====================================
+    // BATEA
+    // ====================================
+
+       batea: {
+
+        titulo: "BATEA",
+
+        modelos: [
+
+            {
+                nombre: "BATEA 14800 Kg",
+                imagen: "batea.jpg"
+            },
+
+        ]
+
     }
 
 };
