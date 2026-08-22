@@ -256,31 +256,27 @@ const categoriasMaquinaria = {
     // VOLCADORES
     // ====================================
 
-    volcadores: {
+       volcadores: {
 
         titulo: "VOLCADORES",
 
         modelos: [
-
 
             {
                 nombre: "FORD CMX 325",
                 imagen: "cmx325.jpg"
             },
 
-             {
+            {
                 nombre: "VOLKSWAGEN",
                 imagen: "vwbalancin.jpg"
-            },
-
-           
+            }
 
         ]
 
-
+    }
 
 };
-
 
 // ========================================
 // ABRIR CATEGORÍA
