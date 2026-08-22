@@ -125,7 +125,7 @@ const categoriasMaquinaria = {
 
             {
                 nombre: "CAT D6G",
-                imagen: "maquina4.jpg"
+                imagen: ""
             }
 
         ]
@@ -139,7 +139,7 @@ const categoriasMaquinaria = {
 
     rodillos: {
 
-        titulo: "RODILLOS COMPACTADORES",
+        titulo: "VIBROCOMPACTADORES",
 
         modelos: [
 
@@ -213,6 +213,11 @@ const categoriasMaquinaria = {
                 nombre: "TEREX CMI 425",
                 imagen: "terexcmi425.jpg"
             },
+
+            {
+                nombre: "TEREX CMI 425",
+                imagen: "fresa.jpg"
+            },
             
         ]
         },
@@ -247,6 +252,9 @@ const categoriasMaquinaria = {
         ]
 
     },
+   // ====================================
+    // VOLCADORES
+    // ====================================
 
     volcadores: {
 
@@ -268,8 +276,6 @@ const categoriasMaquinaria = {
            
 
         ]
-
-    },
 
 
 
