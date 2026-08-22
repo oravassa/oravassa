@@ -274,6 +274,25 @@ const categoriasMaquinaria = {
 
         ]
 
+    },
+
+ // ====================================
+    // SIDER
+    // ====================================
+
+       sider: {
+
+        titulo: "SIDER",
+
+        modelos: [
+
+            {
+                nombre: "IVECO 170E28",
+                imagen: "sider.jpg"
+            },
+
+        ]
+
     }
 
 };
