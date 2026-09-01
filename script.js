@@ -1068,30 +1068,166 @@ function mostrarFoto(){
 // NAVEGACIÓN TÁCTIL EN CELULAR
 // ========================================
 
-document.getElementById("imagenGaleria").addEventListener("click", function(event){
+let inicioX = 0;
+let inicioY = 0;
+let finX = 0;
+let finY = 0;
 
-    // Solo funciona en pantallas de celular
+
+// ========================================
+// DETECTAR INICIO DEL DESLIZAMIENTO
+// ========================================
+
+document.addEventListener("touchstart", function(event){
+
     if(window.innerWidth > 700){
         return;
     }
 
-    // Obtener el ancho de la imagen
-    const anchoImagen = this.clientWidth;
+    // Solo cuando está abierta la galería
+    const modalGaleria = document.getElementById("modalGaleria");
 
-    // Obtener la posición del toque dentro de la imagen
-    const posicionX = event.offsetX;
+    if(modalGaleria && modalGaleria.style.display === "flex"){
 
-    // Si tocamos la mitad izquierda
-    if(posicionX < anchoImagen / 2){
-
-        fotoAnterior();
+        inicioX = event.touches[0].clientX;
+        inicioY = event.touches[0].clientY;
 
     }
 
-    // Si tocamos la mitad derecha
+}, { passive: true });
+
+
+// ========================================
+// DETECTAR FIN DEL DESLIZAMIENTO
+// ========================================
+
+document.addEventListener("touchend", function(event){
+
+    if(window.innerWidth > 700){
+        return;
+    }
+
+    const modalGaleria = document.getElementById("modalGaleria");
+
+    if(!modalGaleria || modalGaleria.style.display !== "flex"){
+        return;
+    }
+
+    finX = event.changedTouches[0].clientX;
+    finY = event.changedTouches[0].clientY;
+
+
+    const diferenciaX = finX - inicioX;
+    const diferenciaY = finY - inicioY;
+
+
+    // Distancia mínima para considerar que hubo un deslizamiento
+
+    const distanciaMinima = 50;
+
+
+    // ========================================
+    // DESLIZAMIENTO HORIZONTAL
+    // ========================================
+
+    if(Math.abs(diferenciaX) > Math.abs(diferenciaY)){
+
+        // Deslizar hacia la izquierda
+        if(diferenciaX < -distanciaMinima){
+
+            fotoSiguiente();
+
+        }
+
+        // Deslizar hacia la derecha
+        else if(diferenciaX > distanciaMinima){
+
+            fotoAnterior();
+
+        }
+
+    }
+
+
+    // ========================================
+    // DESLIZAMIENTO VERTICAL
+    // ========================================
+
     else{
 
-        fotoSiguiente();
+        // Deslizar hacia arriba o hacia abajo
+        if(Math.abs(diferenciaY) > distanciaMinima){
+
+            cerrarGaleria();
+
+        }
+
+    }
+
+});
+// ========================================
+// GESTOS TÁCTILES - IMAGEN GRANDE MAQUINARIA
+// ========================================
+
+let inicioMaquinariaX = 0;
+let inicioMaquinariaY = 0;
+
+
+document.addEventListener("touchstart", function(event){
+
+    if(window.innerWidth > 700){
+        return;
+    }
+
+    const modalImagen = document.getElementById("modalImagen");
+
+    if(modalImagen && modalImagen.style.display === "flex"){
+
+        inicioMaquinariaX = event.touches[0].clientX;
+        inicioMaquinariaY = event.touches[0].clientY;
+
+    }
+
+}, { passive: true });
+
+
+document.addEventListener("touchend", function(event){
+
+    if(window.innerWidth > 700){
+        return;
+    }
+
+    const modalImagen = document.getElementById("modalImagen");
+
+    if(!modalImagen || modalImagen.style.display !== "flex"){
+        return;
+    }
+
+    const finMaquinariaX = event.changedTouches[0].clientX;
+    const finMaquinariaY = event.changedTouches[0].clientY;
+
+
+    const diferenciaX =
+        finMaquinariaX - inicioMaquinariaX;
+
+    const diferenciaY =
+        finMaquinariaY - inicioMaquinariaY;
+
+
+    const distanciaMinima = 50;
+
+
+    // ========================================
+    // DESLIZAMIENTO VERTICAL
+    // ========================================
+
+    if(Math.abs(diferenciaY) > Math.abs(diferenciaX)){
+
+        if(Math.abs(diferenciaY) > distanciaMinima){
+
+            cerrarImagenGrande();
+
+        }
 
     }
 
